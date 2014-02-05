@@ -31,7 +31,7 @@ class Router extends Actor {
           ctx.complete()
         }
         case Success(result) => {
-          println(result)
+          ctx.getResponse().getWriter().print(result)
           ctx.complete()
         }
       }
